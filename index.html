@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Form</title>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <h1 id="title">Classroom Observation Survey</h1>
-        <p id="description">
-          Please take a few minutes to fill out when conducting an observation
-        </p>
-      </div>
-      <form id="survey-form">
-        <label id="name-label" for="name">Name</label
-        ><input placeholder="Enter your name" type="text" id="name" required />
-        <label id="email-label" for="email">Email</label
+    <div class="header">
+      <h1 id="title">Classroom Observation Survey</h1>
+      <p id="description">
+        Please take a few minutes to fill out when conducting an observation
+      </p>
+    </div>
+
+    <form class="container" id="survey-form">
+      <div class="inputs">
+        <label class="label" id="name-label" for="name">Name</label
         ><input
+          class="input"
+          placeholder="Enter your name"
+          type="text"
+          id="name"
+          required
+        />
+      </div>
+
+      <div class="inputs space">
+        <label class="label" id="email-label" for="email">Email</label
+        ><input
+          class="input"
           placeholder="ex: myname@example.com"
           type="email"
           id="email"
           required
         />
-        <label id="number-label" for="number">Number</label
+      </div>
+
+      <div class="inputs space">
+        <label class="label" id="number-label" for="number">Number</label
         ><input
+          class="input"
           placeholder="Enter your number"
           min="10"
           max="10"
@@ -33,51 +54,57 @@
           id="number"
           required
         />
+      </div>
 
-        <div class="OBdetails">
-          <label for="dropdown">Observed by</label>
-          <select name="dropdown" id="dropdown">
-            <option value="option0">Please select</option>
-            <option value="option1">Manoj Kumar</option>
-            <option value="option2">Mahesh Kumar</option>
-            <option value="option3">Suresh Kumar</option>
-            <option value="option4">Pankaj Rai</option>
-          </select>
+      <div class="inputs space">
+        <label class="label" for="dropdown">Observed by</label>
+        <select class="input" name="dropdown" id="dropdown">
+          <option value="option0">Please select</option>
+          <option value="option1">Manoj Kumar</option>
+          <option value="option2">Mahesh Kumar</option>
+          <option value="option3">Suresh Kumar</option>
+          <option value="option4">Pankaj Rai</option>
+        </select>
+      </div>
+
+      <div class="inputs space">
+        <p class="label">Grade Level</p>
+        <div class="radiobtn input">
+          <label><input type="radio" value="5" name="Glvl" />5</label>
+          <label><input type="radio" value="6" name="Glvl" />6</label>
+          <label><input type="radio" value="7" name="Glvl" />7</label>
+          <label><input type="radio" value="8" name="Glvl" />8</label>
         </div>
+      </div>
 
-        <div class="radioGroup">
-          <p>Grade Level</p>
-          <label><input type="radio" value="5" name="Glvl">5</label>
-          <label><input type="radio" value="6" name="Glvl">6</label>
-          <label><input type="radio" value="7" name="Glvl">7</label>
-          <label><input type="radio" value="8" name="Glvl">8</label>
+      <div class="inputs space">
+        <p class="label">Classroom Enviroment</p>
+        <div class="radiobtn input">
+          <label
+            ><input value="value1" type="checkbox" />Classroom is clean</label
+          >
+          <label
+            ><input value="value2" type="checkbox" />Board Configuration is
+            up-to-date</label
+          >
+          <label
+            ><input value="value3" type="checkbox" /> Standards are posted and
+            visible to all students</label
+          >
+          <label
+            ><input value="value4" type="checkbox" /> Board Configuration is not
+            up-to-date</label
+          >
+          <label
+            ><input value="value5" type="checkbox" />Standards are not
+            posted.</label
+          >
         </div>
+      </div>
 
-        <div class="chechboxgrp">
-          <p>Classroom Enviroment</p>
-          <label><input value="value1" type="checkbox">Classroom is clean</label>
-          <label><input value="value2" type="checkbox">Board Configuration is up-to-date</label>
-          <label><input value="value3" type="checkbox">
-            Standards are posted and visible to all students</label>
-          <label><input value="value4" type="checkbox">
-            Board Configuration is not up-to-date</label>
-          <label><input value="value5" type="checkbox">Standards are not posted.</label>
-        </div>
+      <textarea class="space" name="About" id="textarea" cols="55" rows="8"></textarea>
 
-        <textarea name="About" id="textarea" cols="55" rows="8"></textarea>
-
-        <button type="submit" id="submit">Submit</button>
-        
-      </form>
-    </div>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+      <button class="space" type="submit" id="submit">Submit</button>
+    </form>
   </body>
 </html>
-
-<!-- <div class="radiobtn">
-  <p>Grade label</p>
-  <input type="radio" name="Grade lavel" value="5" id="5" /> <label for="5">5</label>
-  <input type="radio" name="Grade lavel" value="6" id="6" /> <label for="6">6</label>
-  <input type="radio" name="Grade lavel" value="7" id="7" /> <label for="7">7</label>
-  <input type="radio" name="Grade lavel" value="8" id="8" /> <label for="8">8</label>
-</div> -->
